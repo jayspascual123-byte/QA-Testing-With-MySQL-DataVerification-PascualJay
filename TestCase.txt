@@ -1,0 +1,47 @@
+Test Case ID: TC-DataEntry-001
+Test Case Title: Data Entry - Valid
+Test Case Description: Functional Testing of Data Entry page with Backend validation using MySQL queries.
+Preconditions: Kara David Birthday Wishnote App is installed locally and MySQL database is pre-populated for comparison. Data entry page is accessed in latest Chrome/Firefox browser.
+Test Data: Five (5) valid entries containing First Name, Last Name, Government Position, and Location and within their maximum character limits.
+
+Test Steps / Expected Results / Actual Results
+
+a. Action: Verify that the form contains labels in proper order and the text boxes are writable.
+Expected Result: The form contains labels in this order: "Target's First Name", "Target's Last Name", "Target's Government Position", and "Target's Location"; all text boxes are writable.
+Actual Result: The form contains labels in the required order and all text boxes are writable.
+
+b. Action: Verify the "Send Wish Note" button.
+Expected Result: The "Send Wish Note" button changes color on hover and is not disabled.
+Actual Result: The "Send Wish Note" button changes color on hover and is not disabled.
+
+c. Action: Enter test data on the respective fields.
+Expected Result: The respective fields accept valid data entries within the maximum character limits.
+Actual Result: The respective fields accept test data.
+
+d. Action: Click "Send Wish Note" and inspect the modal.
+Expected Result: The "Verify Target Data" modal appears and displays all four entered values.
+Actual Result: Pending Execution
+
+e. Action: Verify the values displayed in the modal.
+Expected Result: The modal values match the values entered in all four fields.
+Actual Result: Pending Execution
+
+f. Action: Click the Cancel button.
+Expected Result: The modal closes and no data is submitted.
+Actual Result: Pending Execution
+
+g. Action: Click "Send Wish Note" again, then click "Confirm & Send".
+Expected Result: The form submits the POST request to the PHP backend.
+Actual Result: Pending Execution
+
+h. Action: Verify the message displayed on the Data Entry page.
+Expected Result: If the insert succeeds, the page displays "Success! The wish note has been sent."
+Actual Result: Pending Execution
+
+i. Action: Verify the submitted test data in the database. In MySQL, run:
+USE birthday_wishnote;
+SELECT * FROM main_corrupt_politicians;
+Expected Result: The submitted record appears in the table. Compare the submitted Location value with the stored Location value.
+Actual Result: Pending Execution
+
+Status: Pending Execution (complete steps d-i and verify database contents before assigning Passed or Failed).
